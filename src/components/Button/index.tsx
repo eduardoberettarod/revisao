@@ -3,11 +3,10 @@ import { styles } from "./style";
 
 type Props = TouchableOpacityProps & {
     text: string,
-    idButton: number,
     isAtivado: boolean,
 }
 
-export default function Button({ text, idButton, isAtivado, ...rest }: Props) {
+export default function Button({ text, isAtivado, ...rest }: Props) {
     return (
         <TouchableOpacity
             {...rest}

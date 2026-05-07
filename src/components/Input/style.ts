@@ -6,9 +6,9 @@ export const styles = StyleSheet.create({
         borderColor: '#0D0D0D',
         borderWidth: 1,
         borderRadius: 10,
-        minWidth: 320,
         padding: 14,
-        fontSize: 16
+        fontSize: 16,
+        textAlign: 'center'
     }
 
 })

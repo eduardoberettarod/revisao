@@ -3,10 +3,8 @@ import { StyleSheet } from "react-native"
 export const styles = StyleSheet.create({
     button: {
         backgroundColor: 'tomato',
-        padding: 16,
-        paddingHorizontal: 32,
         borderRadius: 10,
-        minWidth: 320,
+        padding: 14,
         marginTop: 10
     },
     textButton: {
