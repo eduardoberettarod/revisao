@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import Button from "@/components/Button";
+import ButtonCircle from "@/components/ButtonCircle";
 import Input from "@/components/Input";
 import { useState } from "react";
 
@@ -28,8 +29,9 @@ export default function App() {
     }
   }
 
-  function fnZerarContador(setContador: any) {
-    setContador(0)
+  function fnZerarContador() {
+    setContadorA(0)
+    setContadorB(0)
   }
 
   function fnZerarVitoria(setVitoria: any) {
@@ -46,8 +48,15 @@ export default function App() {
         </Text>
 
 
-
         <View style={styles.container}>
+
+          
+          <ButtonCircle
+            activeOpacity={0.7}
+            onPress={() =>
+              fnZerarContador()
+            }
+          />
 
           {/* TIME A */}
           <View style={styles.card}>
@@ -91,15 +100,6 @@ export default function App() {
                 activeOpacity={0.7}
                 onPress={() =>
                   fnAumentarContador(-1, contadorA, setContadorA, vitoriaA, setVitoriaA)
-                }
-              />
-
-              <Button
-                text="Zerar"
-                isAtivado={false}
-                activeOpacity={0.7}
-                onPress={() =>
-                  fnZerarContador(setContadorA)
                 }
               />
 
@@ -160,14 +160,6 @@ export default function App() {
                 }
               />
 
-              <Button
-                text="Zerar"
-                isAtivado={false}
-                activeOpacity={0.7}
-                onPress={() =>
-                  fnZerarContador(setContadorB)
-                }
-              />
 
               <Button
                 text="Zerar Vitórias"
